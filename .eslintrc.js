@@ -1,52 +1,32 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es2021': true
+  env: {
+    browser: true,
+    es2021: true
   },
-  'extends': [
-    'eslint:recommended',
-    'prettier'
-  ],
-  'parserOptions': {
-    'ecmaVersion': 'latest',
-    'sourceType': 'module'
+  extends: ['eslint:recommended', 'prettier'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
   },
-  'rules': {
-    'indent': [
-      'error',
-      2
-    ],
-    'linebreak-style': [
-      'error',
-      'unix'
-    ],
-    'quotes': [
-      'error',
-      'single'
-    ],
-    'semi': [
-      'error',
-      'always'
-    ],
+  rules: {
+    indent: ['error', 2],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'always'],
     'no-trailing-spaces': [
       'error',
       {
-        'skipBlankLines': false
+        skipBlankLines: false
       }
     ],
     'max-len': [
       'error',
       {
-        'code': 120
+        code: 120
       }
     ],
-    'comma-dangle': [
-      'error',
-      'never'
-    ],
+    'comma-dangle': ['error', 'never'],
+    'no-unused-vars': ['warn']
   },
-  ignorePatterns: [
-    '/config/**',
-    '.eslintrc.js'
-  ]
+  ignorePatterns: ['/config/**', '.eslintrc.js']
 };

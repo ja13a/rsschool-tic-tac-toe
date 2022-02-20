@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const constants = require('./constants');
 
 const paths = {
   src: path.resolve(__dirname, '../src'),
@@ -56,14 +57,18 @@ module.exports = {
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: 'asset/inline'
+      },
+      {
+        test: /\.wav/,
+        type: 'asset/resource'
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: paths.src + '/template.html',
-      title: 'Webpack 5 & Vanilla JS boilerplate',
-      favicon: paths.src + '/img/favicon.svg',
+      title: constants.htmlTitle,
+      favicon: paths.src + `/img/${constants.faviconFileName}`,
       filename: 'index.html'
     }),
     new StylelintPlugin()
