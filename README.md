@@ -1,2 +1,2 @@
-# :package: Webpack 5 & Vanilla JS boilerplate 
-example deployment: https://ja13a.github.io/js-webpack-boilerplate/
+# :x: :o: Tic-tac-toe game
+gh-pages deployment: https://ja13a.github.io/rsschool-tic-tac-toe/
