@@ -127,7 +127,6 @@ window.onload = () => {
 
   function updateScores() {
     let newScoresTable = JSON.parse(localStorage.getItem('scores'));
-    console.log(newScoresTable);
     newScoresTable && (newScoresTable = newScoresTable.map((el, i) => `${i + 1}. ${el}`).join('\n'));
     document.querySelector('#scores').innerText = newScoresTable;
   }
