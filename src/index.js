@@ -1,5 +1,6 @@
 import './styles/index.scss';
 import rsschoolLogoSrc from './img/rs_school-og.png';
+import ghLogoSrc from './img/GitHub_Logo_White.png';
 import clickSound from './audio/click.wav';
 
 console.log('Предполагаемая оценка: 60/70');
@@ -7,6 +8,9 @@ console.log('Предполагаемая оценка: 60/70');
 window.onload = () => {
   const rsschoolLogo = document.querySelector('.rs-school-logo');
   rsschoolLogo.setAttribute('src', rsschoolLogoSrc);
+
+  const ghLogo = document.querySelector('.gh-logo');
+  ghLogo.setAttribute('src', ghLogoSrc);
 
   // Game itself
 
